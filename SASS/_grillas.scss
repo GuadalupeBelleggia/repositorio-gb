@@ -1,0 +1,35 @@
+/*grilla 1*/
+
+#estructura1 {
+    background-image: url(../images/imagenHome.png);
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: 12px;
+    grid-template: {
+        areas:
+        "menu menu menu"
+        "cont cont cont"
+        "pie pie pie";
+        columns: 1fr 1fr 1fr;
+        rows: -75px 888px 76px;
+    }
+    
+}
+
+/*grilla 2*/
+
+#estructura2 {
+    display: grid;
+    height: 100vh;
+    gap: 12px;
+    grid-template: {
+        areas:
+        "menu menu menu"
+        "cont cont cont"
+        "pie pie pie";
+        columns: 1fr 1fr 1fr;
+        rows: 79px 1600px 76px;
+    }
+
+}

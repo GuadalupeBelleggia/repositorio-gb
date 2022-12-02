@@ -1,0 +1,32 @@
+.header {
+    width: 100%;
+    height: 91px;
+    background-color: none;
+    position: fixed;
+    z-index: 1; 
+    grid-area: menu;
+    display: flex;
+    justify-content: end;
+    & &__menu {
+        margin: {
+            top:30px;
+            right: 40px;
+        }
+        ul li {
+            display: inline;
+            padding: 10px; 
+            a {
+                color: white;
+                text-decoration: none;
+                font: {
+                    family: 'cairo', sans-serif;
+                    size: 20px;
+                    weight: lighter;                      
+                }
+                &:hover {
+                    font-weight: bold;
+                } 
+            } 
+        }                  
+    } 
+}

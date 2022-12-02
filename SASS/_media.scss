@@ -1,0 +1,405 @@
+/*Responsive*/
+
+/*mobile*/
+/*
+@media (min-width: 320px) and (max-width: 767px) {
+    
+    #estructura1 {
+        display: grid;
+        grid-area: 
+        "menu"
+        "cont"
+        "pie";
+        grid-tamplate: {
+            rows: 10px 500px 17px;
+            columns: 1fr;
+        }
+        gap:none;
+        height: 527px;
+        header {
+            height: 150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center; 
+            align: {
+                items: stretch;
+                content: stretch;
+            }
+            &__menu {
+                ul {
+                    margin: {
+                        top: 75px;
+                        left: 50px;
+                    }
+                }
+                ul li {
+                    display: inline;
+                    padding: 5px;
+                    a {        
+                       font-size: 15px;  
+                    }
+                }
+            }
+        }
+    }
+    
+    .titular {
+        width: 100%;
+        height: 515px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:10px;
+        .animate__animated.animate__zoomIn {
+            font-size: 25px;
+        }  
+        .animate__animated.animate__fadeIn {
+            font-size: 15px;
+        }
+    }
+
+    .footer {
+        background-color:none;
+        width: 100%;
+        height: 20px;
+        grid-area: pie;
+        display: flex;
+        justify-content: center;
+        & &__datos {
+            color:rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 5px;
+            position: absolute;
+            margin: {
+                top: -112px;
+                left: -174px;
+            }
+            li {
+                font-size: 7px;
+                padding: 2px;
+                a {
+                    color: yellow;   
+                }
+            }
+
+
+        }    
+    }  
+
+
+
+    #estructura2 {
+        display: grid;
+        grid-template-rows: 10px 1309px 15px;
+        grid-template-columns: 1fr;
+        gap:none;
+        height: 527px;
+    }
+
+    #estructura2 .header {
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; 
+        align-items: stretch;
+        align-content: stretch;
+    }
+
+    #estructura2 .header .header__menu ul {
+        margin-top: 75px;
+        margin-left: 50px;
+    }
+
+    #estructura2 .header .header__menu ul li {
+        display: inline;
+        padding: 5px;
+    }
+
+    
+    #estructura2 .header .header__menu ul li a { 
+        font-size: 8px;  
+    }
+
+    #estructura2 .footer {
+        background-color:#F2E205;
+        width: 100%;
+        height: 20px;
+        margin-top: 1055px;
+    }  
+
+    #estructura2 .footer .footer__datos {
+        display: none;
+    }  
+
+    #estructura2 .section {
+        grid-area: cont; 
+        gap: 15px
+    }
+    
+    #estructura2 .section .section__bio {
+        width: 100%;
+        height: 900px;
+        position:relative;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: stretch;
+        gap: 15px;
+        margin-top: 80px;
+    }
+    
+    #estructura2 .section .section__bio .animate__animated.animate__slideInRight {
+        font-family: 'cairo', sans-serif;
+        font-size: 15px;
+        margin-left: 7px;
+        width: 280px;
+        margin-left: 30px;
+    }
+    
+    #estructura2 .section .section__bio .animate__animated.animate__slideInLeft {
+        height: 250px;
+        margin-left: 30px;
+    }
+
+    #estructura2 .diseño {
+        width: 272px;
+        height: 1400px;   
+        gap: 10px;
+        grid-area: cont; 
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        margin-top: 349px;
+        margin-left: 25px; 
+    }
+    
+    #estructura2 .diseño .diseño__item {
+        width: 329px;
+    }
+    
+    #estructura2 .diseño__item img {
+        width: 70px;
+    }
+
+    #estructura2 .fotografia {
+        width: 272px;
+        height: 1400px;   
+        gap: 10px;
+        grid-area: cont; 
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        margin-top: 349px;
+        margin-left: 25px; 
+    }
+    
+    #estructura2 .fotografia .fotografia__item {
+        width: 329px;
+    }
+    
+    #estructura2 .fotografia__item img {
+        width: 70px;
+    }
+}
+
+
+/*tablet*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #estructura1 {
+        display: grid;
+        grid-template-rows: 138px 503px 17px;
+        width: 100%;
+        height: 658px;
+    }
+
+    #estructura1 .header {
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        align-items: stretch;
+        align-content: stretch;
+    }
+
+    #estructura1 .header .header__menu ul {
+        margin-top: 75px;
+        margin-left: 50px;
+    }
+
+    #estructura1 .header .header__menu ul li {
+        display: inline;
+        padding: 5px;
+    }
+
+    
+    #estructura1 .header .header__menu ul li a { 
+        font-size: 8px;  
+    }
+
+    #estructura1 .titular {
+        width: 100%;
+        height: 515px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:10px
+    }
+
+    #estructura1 .titular .titular__name {
+        font-size: 25px;
+    }  
+
+    #estructura1 .titular .titular__description {
+        font-size: 15px;
+    }
+
+    #estructura1 .titular .titular__name,  .titular .titular__description {
+       margin-left: 142px;
+    }
+
+    #estructura1 .footer {
+        background-color:none;
+        width: 100%;
+        height: 20px;
+        grid-area: pie;
+        display: flex;
+        justify-content: center;    
+    }  
+
+    #estructura1 .footer .footer__datos {
+        color:yellow;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 5px;
+        position: absolute;
+        top: -3px;
+        left: -110px;
+    }  
+
+    #estructura1 .footer .footer__datos li {
+        font-size: 7px;
+        padding: 2px;
+    }
+
+    #estructura1 .footer .footer__datos li a {
+        color: yellow;
+    }
+
+    #estructura2 {
+        display: grid;
+        grid-template-rows: 138px 1264px 17px;
+        width: 100%;
+        height: 658px;
+    }
+
+    #estructura2 .header {
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        align-items: stretch;
+        align-content: stretch;
+    }
+
+    #estructura2 .header .header__menu ul {
+        margin-top: 75px;
+        margin-left: 50px;
+    }
+
+    #estructura2 .header .header__menu ul li {
+        display: inline;
+        padding: 5px;
+    }
+
+    
+    #estructura2 .header .header__menu ul li a { 
+        font-size: 8px;  
+    }
+
+    #estructura2 .footer {
+        background-color:#F2E205;
+        width: 100%;
+        height: 20px;
+        margin-top: 1055px;
+    }  
+
+    #estructura2 .footer .footer__datos {
+        display: none;
+    }  
+
+    #estructura2 .section {
+        grid-area: cont; 
+        gap: 15px
+    }
+    
+    #estructura2 .section .section__biografia {
+        width: 100%;
+        height: 900px;
+        position:relative;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: stretch;
+        gap: 15px;
+        margin-top: 80px;
+    }
+    
+    #estructura2 .section .section__biografia p {
+        font-family: 'cairo', sans-serif;
+        font-size: 15px;
+        margin-left: 7px;
+        width: 470px;
+        margin-left: 139px;    
+    }
+    
+    #estructura2 .section .section__biografia img {
+        height: 470px;
+        margin-left: 139px;
+    }
+
+    #estructura2 .diseño {
+        width: 734px;
+        height: 1560px;
+        gap: 5px;
+        grid-area: cont;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        margin-top: 349px;
+        margin-left: 25px;
+    }
+    
+    #estructura2 .diseño .diseño__item {
+        width: 329px;
+    }
+    
+    #estructura2 .diseño__item img {
+        width: 70px;
+    }
+
+    #estructura2 .fotografia {
+        width: 734px;
+        height: 1560px;
+        gap: 5px;
+        grid-area: cont;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        margin-top: 349px;
+        margin-left: 25px;
+    }
+    
+    #estructura2 .fotografia .fotografia__item {
+        width: 329px;
+    }
+    
+    #estructura2 .fotografia__item img {
+        width: 70px;
+    }
+}
