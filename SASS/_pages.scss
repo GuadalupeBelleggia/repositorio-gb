@@ -1,3 +1,67 @@
+
+/*Variables*/
+
+$ColorTextoPrincipal: #ffff;
+$ColorTextoSecundario: black;
+
+$TipografiaPrincipal: Helvetica;
+$TipografiaSecundaria: 'cairo',sans-serif;
+
+
+$Destktop: (min-width:1024px);
+$Mobile: (max-width:767px);
+
+$WidthFlexItem: 400px;
+$WidthFlexItemImg: 100%;
+
+/*Mixins*/
+
+@mixin encabezados {
+    position: absolute;
+    width: 1243px;
+    height: 406px;
+    left: 115px;
+    top: 111px;
+    font: {
+        family: $TipografiaPrincipal;
+        weight: 700;
+        size: 128px;
+    }
+}
+
+@mixin encabezado-img {
+    position: absolute;
+    margin: {
+        top: 180px;
+        left: 9px; 
+    }  
+}
+
+@mixin elementos-flex {
+    height: 100vh;
+    gap: 15px;
+    grid-area: cont;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-end;
+    align-self: center;
+    margin: {
+        left: 33px;
+        top: 400px;
+    }
+
+}
+
+@mixin item-description {
+    font-family: $TipografiaSecundaria;
+    padding: 5px;
+    margin: 5px; 
+}
+ 
+/* Pagina Principal */
+
 .titular {
     width: 100%;
     height: 900px;
@@ -12,17 +76,17 @@
     grid-area: cont; 
     transition: color .5s;
     overflow: hidden;
-    margin-top: -30px;
-    color:aliceblue;
+    margin-bottom: -30px;
+    color: $ColorTextoPrincipal;
     & .animate__animated.animate__zoomIn {
         font: {
-            family: Helvetica;
+            family: $TipografiaPrincipal;
             size: 13rem;
             weight: bold;
         }
         word-spacing: 1rem;
         margin-left: 230px;
-    }
+    } 
     & .animate__animated.animate__slideInRight {
         width: 150px;
         height: 150px;
@@ -32,8 +96,8 @@
         } 
     }
     & &__loop {
-        margin-top: -502px;
-        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 555px;
+        font-family: $TipografiaPrincipal;
         font-size: 30px;
         font-weight: lighter;
         letter-spacing: 20px;
@@ -48,7 +112,8 @@
             0% {transform: translateX(0);}
             100% {transform: translateX(-100%);}
         }
-    } 
+    }
+
 }
 
 /*contenido SobreMi*/
@@ -57,76 +122,71 @@
     grid-area: cont; 
     gap: 15px;
     & &__encabezado {
-        position: absolute;
-        width: 1243px;
-        height: 406px;
-        left: 115px;
-        top: 111px;
-        font: {
-            family: Helvetica;
-            weight: 700;
-            size: 128px;
-            height: 115px; 
-        }
+        @include encabezados;
     }
     & &__bio {
         width: 100%;
         height: 900px;
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        align: {
-            items: flex-start;
-            content: stretch;
-        }
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items:flex-start;
+        flex-wrap: wrap;
         gap: 26px;
         margin: {
-            top: 490px;
-            left: 33px;
+            top: 524px;
+            left: 110px;
         }
-        .animate__animated.animate__slideInRight p { 
-            font: {
-                family: 'cairo', sans-serif;
-                size: 20px;
+        .animate__animated.animate__slideInRight {
+            width: 50%;
+            p { 
+                margin-left: 20px;
+                padding-top: 25px; 
+                font: {
+                    family: $TipografiaPrincipal;
+                    weight: lighter;
+                    size: 20px;
+                } 
+    
             }
-            margin-left: 7px;
-            width: 600px;   
             a {
-            text-decoration: none;
-            color: black;
-            }
+                text-decoration: none;
+                color:$ColorTextoSecundario; 
+                font-weight: bolder;
+            }  
+                
+            
         }
         .animate__animated.animate__slideInLeft {
-            height: 600px;
+            height: 50%;
             margin-left: 10px;
         }
-    }
-    & &__formacion {
-        width: 100%;
-        height: 445px;
-        margin: {
-            left: -7px;
-            top: -263px;
-        }
-        .linea1 {
-            border-top: 1px solid black;
-            height: 2px;
-            max-width: 600px;
-            padding: 12px;
-            margin: 20px auto 0 137px;
-        }
-        h3 {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            font: {
-                family: 'cairo', sans-serif;
-                weight: 700;
-                size: 64px;
+        .formacion {
+            display: inline-block;
+            width: 600px;
+            height: 400px;
+            margin: {
+                left: 300px;
+                top: -7px;
+                }
+            font-family: $ColorTextoPrincipal;
+            .linea1 {
+                width: 447px;
+                border-top: 1px solid black;
+                padding: 12px;
+                margin: 20px auto 0 -288px;
             }
-            line-height: 60px;
-            text-align: right;
-            margin-right: 708px; 
+            h3 {
+                width: 600px;
+                font: {
+                    family: $TipografiaSecundaria;
+                    weight: bold;
+                    size: 50px;
+                }
+                line-height: 60px;
+                text-align: right;
+                margin-left: -443px; 
+            }
         }
     }
 }
@@ -146,213 +206,94 @@
     & &__titulo {
         font: {
             size: 50px;
-            family: 'cairo', sans-serif;
+            family: $TipografiaSecundaria;
             weight: lighter;
         }
         letter-spacing: 20px;        
         text-transform:uppercase; 
-        color: #ffffff;
+        color: $ColorTextoPrincipal;
     }
-    form input, form textarea, form label {
+    form input, form textarea {
         width: 400px;
         display: inline-block;    
-        font-family: Arial, Helvetica, sans-serif;    
-        margin-bottom: 15px;
+        font-family: $ColorTextoSecundario;    
+        margin: 15px;
         padding: 2px;
         display: block;
         top: 219px;
         left: 223px;
-        color: #ffffff;
+        color: $ColorTextoPrincipal;
+        background-color: transparent;
+        border: $ColorTextoPrincipal solid;
     }
     & &--botones {
         width: 100px;
         height: auto;
         display: inline;
-        color:black;
+        font-family: $TipografiaSecundaria;
+        color:$ColorTextoPrincipal;
+        border: $ColorTextoPrincipal solid;
+        background-color: transparent;
         &:focus {
-            background-color:black;
-            color:#ffffff;
+            background-color: $ColorTextoPrincipal;
+            color: $ColorTextoSecundario;
         }     
     }
     form textarea {
         width: 600px;
         height: auto;    
+    }
+    form label {
+        color:$ColorTextoPrincipal;
+        font-family: $TipografiaSecundaria;
     } 
 }
 
 /*Sección Diseño*/
-
-
-#estructura2 {
-    display: grid;
-    grid-template-areas:         
-    "menu menu menu"
-    "cont cont cont"
-    "pie pie pie"; 
-    grid-template: {
-        columns: 1fr 1fr 1fr;
-        rows: 79px 1600px 76px;
-    }
-    height: 100vh;
-    gap: 12px;
-    .header {
-        width: 100%;
-        height: 91px;
-        background-color: #ffffff;
-        position: fixed;
-        z-index: 1; 
-        grid-area: menu;
-        display: flex;
-        justify-content: end;
-        &__menu {
-            margin: {
-                top: 30px;
-                right: 40px;
-            }
-            ul li {
-                display: inline;
-                padding: 10px;
-                a {
-                    color: black;
-                    text-decoration: none;
-                    font: {
-                        size: 20px;
-                        weight: lighter;
-                        family: 'cairo', sans-serif;                         
-                    }
-                    &:hover {
-                        font-weight: bold;
-                    }
-                }
-            }
-        }      
-    }
-    .footer {
-        background-color:#ffffff;
-        width: 100%;
-        height: 70px;
-        top:1200px;
-        grid-area: pie;
-        display: flex;
-        justify-content: center;
-        &__datos {
-            li {
-                font: {
-                    size: 18px;
-                    family: 'cairo', sans-serif;
-                }
-                position: relative;
-                display: inline;
-                top: 21px;
-                left: 2px;
-                padding: 10px;
-                a {
-                    text-decoration: none;
-                    color: black;  
-                
-                }
-            }    
-        }  
-    }
     .encabezado {
         h2 {
-            position: absolute;
-            width: 1243px;
-            height: 406px;
-            left: 115px;
-            top: 200px;
-            font: {
-                family: Helvetica;
-                weight: 700;
-                size: 170px;
-            }
+            @include encabezados;
             line-height: 115px;
         }
         img {
-            position: absolute;
-            margin: {
-                top:180px;
-                left: 9px;
-            }
+            @include encabezado-img;
         }
     }
     .diseño {
-        height: 100vh;   
-        gap: 15px;
-        grid-area: cont; 
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        align-content: flex-end;
-        align-self: center;
-        margin: {
-            left: 33px;
-            top: 400px
-        }
+        @include elementos-flex;
         &__item {
-            width: 400px;
+            width: $WidthFlexItem;
             img {
-                width: 100%;
+                width: $WidthFlexItemImg;
             }
             h3 {
-                font-family: 'cairo', sans-serif;
-                padding: 5px;
-                margin: 5px;
+                @include item-description;
             }
         }
     }
-}
 
-/*secciÃ³n fotografí­a*/
+
+/*sección fotografí­a*/
 
 .fotografia__encabezado {
     h2 {
-        position: absolute;
-        width: 1243px;
-        height: 406px;
-        left: 115px;
-        top: 200px;
-        font: {
-            family: Helvetica;
-            weight: 700;
-            size: 170px;
-        }
+        @include encabezados;
         line-height: 115px;
     }
     img {
-        position: absolute;
-        margin: {
-            top:180px;
-            left: 9px;
-        }
-    
+        @include encabezado-img;
     }
-
-
-
 }
 
 .fotografia {
-    height: 100vh; 
-    gap: 15px;
-    grid-area: cont; 
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: flex-end;
-    align-self: center;
-    margin-top: 370px;
+    @include elementos-flex;
     &__item {
-        width: 400px;
+        width: $WidthFlexItem;
         img {
-            width: 100%;
+            width: $WidthFlexItemImg;
         }
         h3 {
-            font-family: 'cairo', sans-serif;
-            padding: 5px;
-            margin: 5px;
+            @include item-description;
         }
     }
 }
