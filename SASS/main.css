@@ -202,7 +202,7 @@
   width: 1243px;
   height: 406px;
   left: 115px;
-  top: 111px;
+  top: 260px;
   font-family: Helvetica;
   font-weight: 700;
   font-size: 128px;
@@ -216,14 +216,13 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 26px;
-  margin-top: 524px;
-  /*    left: 110px;*/
+  margin-top: 625px;
 }
 .section .section__bio .animate__animated.animate__slideInRight {
   width: 50%;
 }
 .section .section__bio .animate__animated.animate__slideInRight p {
-  /*margin-left: 20px;*/
+  margin-left: 20px;
   padding-top: 25px;
   font-family: Helvetica;
   font-weight: lighter;
@@ -236,30 +235,31 @@
 }
 .section .section__bio .animate__animated.animate__slideInLeft {
   height: 50%;
-  /*margin-left: 10px;*/
+  padding-left: 127px;
 }
 .section .section__bio .formacion {
   display: inline-block;
   width: 600px;
   height: 400px;
-  /*    left: 300px;*/
+  padding-left: 102px;
   margin-top: -7px;
   font-family: white;
 }
 .section .section__bio .formacion .linea1 {
   width: 447px;
   border-top: 1px solid black;
-  padding: 12px;
+  padding-right: 12px;
   margin: 20px auto 0;
 }
 .section .section__bio .formacion h3 {
   width: 600px;
+  padding-top: 16px;
+  padding-right: 126px;
   font-family: "cairo", sans-serif;
   font-weight: bold;
   font-size: 50px;
   line-height: 60px;
   text-align: right;
-  /*margin-left: -443px;*/
 }
 
 /*sección contacto*/
@@ -321,7 +321,7 @@
   width: 1243px;
   height: 406px;
   left: 115px;
-  top: 111px;
+  top: 260px;
   font-family: Helvetica;
   font-weight: 700;
   font-size: 128px;
@@ -364,7 +364,7 @@
   width: 1243px;
   height: 406px;
   left: 115px;
-  top: 111px;
+  top: 260px;
   font-family: Helvetica;
   font-weight: 700;
   font-size: 128px;
@@ -431,7 +431,7 @@
     /*margin-left: -220px;*/
   }
   #estructura1 .titular {
-    height: 770px;
+    height: 1035px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -440,13 +440,13 @@
   }
   #estructura1 .titular .animate__animated.animate__zoomIn {
     font-size: 70px;
-    margin-left: 10px;
+    margin-left: 30px;
   }
   #estructura1 .titular .animate__animated.animate__slideInRight {
     width: 75px;
     height: 75px;
     margin-bottom: -81px;
-    margin-right: 5px;
+    margin-left: 280px;
   }
   #estructura1 .titular #estructura1 .titular__loop {
     margin-bottom: 276px;
@@ -472,7 +472,7 @@
     display: grid;
     grid-template-areas: "menu" "cont" "pie";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 252px 1035px 220px;
     height: 100%;
   }
   #estructura2 .header ul li {
@@ -493,9 +493,11 @@
     /*margin-left: -220px;*/
   }
   #estructura2 .section {
+    width: 252px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-start;
     padding-left: 20px;
   }
   #estructura2 .section__encabezado {
@@ -509,18 +511,37 @@
   }
   #estructura2 .section__bio {
     margin-top: 600px;
-    /*    margin-left: 20px;*/
   }
-  #estructura2 .section .animate__animated.animate__slideInRight {
-    width: 100%;
+  #estructura2 .section .animate__animated.animate__slideInLeft {
+    padding-left: 15px;
   }
   #estructura2 .section .animate__animated.animate__slideInRight p {
-    width: 400px;
-    /*margin-left: 20px;*/
+    width: 320px;
     padding-top: 2px;
     font-family: Helvetica;
     font-weight: lighter;
     font-size: 20px;
+  }
+  #estructura2 .section .formacion {
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    padding-left: 23px;
+  }
+  #estructura2 .section .formacion .linea1 {
+    width: 320px;
+    border-top: 1px solid black;
+    padding-right: 12px;
+    margin: 20px auto 0;
+  }
+  #estructura2 .section .formacion h3 {
+    width: 320px;
+    padding-top: 16px;
+    padding-right: none;
+    padding-left: none;
+    font-size: 34px;
+    line-height: 60px;
+    text-align: right;
   }
   #estructura2 .encabezado h2 {
     position: absolute;
