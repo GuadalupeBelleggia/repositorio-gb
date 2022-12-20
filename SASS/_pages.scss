@@ -33,7 +33,7 @@ $WidthFlexItemImg: 100%;
     position: absolute;
     margin: {
         top: 180px;
-        left: 9px; 
+        /*left: 9px;*/ 
     }  
 }
 
@@ -48,7 +48,7 @@ $WidthFlexItemImg: 100%;
     align-content: flex-end;
     align-self: center;
     margin: {
-        left: 33px;
+        /*left: 33px;*/
         top: 400px;
     }
 
@@ -85,14 +85,14 @@ $WidthFlexItemImg: 100%;
             weight: bold;
         }
         word-spacing: 1rem;
-        margin-left: 230px;
+        /*margin-left: 230px;*/
     } 
     & .animate__animated.animate__slideInRight {
         width: 150px;
         height: 150px;
         margin: {
             bottom: -200px;
-            right: 467px; 
+        /*    right: 467px;*/ 
         } 
     }
     & &__loop {
@@ -135,12 +135,12 @@ $WidthFlexItemImg: 100%;
         gap: 26px;
         margin: {
             top: 524px;
-            left: 110px;
+        /*    left: 110px;*/
         }
         .animate__animated.animate__slideInRight {
             width: 50%;
             p { 
-                margin-left: 20px;
+                /*margin-left: 20px;*/
                 padding-top: 25px; 
                 font: {
                     family: $TipografiaPrincipal;
@@ -159,14 +159,14 @@ $WidthFlexItemImg: 100%;
         }
         .animate__animated.animate__slideInLeft {
             height: 50%;
-            margin-left: 10px;
+            /*margin-left: 10px;*/
         }
         .formacion {
             display: inline-block;
             width: 600px;
             height: 400px;
             margin: {
-                left: 300px;
+            /*    left: 300px;*/
                 top: -7px;
                 }
             font-family: $ColorTextoPrincipal;
@@ -174,7 +174,7 @@ $WidthFlexItemImg: 100%;
                 width: 447px;
                 border-top: 1px solid black;
                 padding: 12px;
-                margin: 20px auto 0 -288px;
+                margin: 20px auto 0 ;
             }
             h3 {
                 width: 600px;
@@ -185,7 +185,7 @@ $WidthFlexItemImg: 100%;
                 }
                 line-height: 60px;
                 text-align: right;
-                margin-left: -443px; 
+                /*margin-left: -443px;*/ 
             }
         }
     }
@@ -259,7 +259,7 @@ $WidthFlexItemImg: 100%;
             @include encabezado-img;
         }
     }
-    .diseño {
+    .design {
         @include elementos-flex;
         &__item {
             width: $WidthFlexItem;

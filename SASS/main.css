@@ -19,6 +19,7 @@
 
 /*grilla 2*/
 #estructura2 {
+  width: 100%;
   display: grid;
   grid-template-areas: "menu menu menu" "cont cont cont" "pie pie pie";
   grid-template-columns: 1fr 1fr 1fr;
@@ -28,7 +29,7 @@
 }
 #estructura2 .header {
   width: 100%;
-  height: 91px;
+  height: 262px;
   background-color: #ffffff;
   position: fixed;
   z-index: 1;
@@ -152,13 +153,13 @@
   font-size: 13rem;
   font-weight: bold;
   word-spacing: 1rem;
-  margin-left: 230px;
+  /*margin-left: 230px;*/
 }
 .titular .animate__animated.animate__slideInRight {
   width: 150px;
   height: 150px;
   margin-bottom: -200px;
-  margin-right: 467px;
+  /*    right: 467px;*/
 }
 .titular .titular__loop {
   margin-bottom: 555px;
@@ -216,13 +217,13 @@
   flex-wrap: wrap;
   gap: 26px;
   margin-top: 524px;
-  margin-left: 110px;
+  /*    left: 110px;*/
 }
 .section .section__bio .animate__animated.animate__slideInRight {
   width: 50%;
 }
 .section .section__bio .animate__animated.animate__slideInRight p {
-  margin-left: 20px;
+  /*margin-left: 20px;*/
   padding-top: 25px;
   font-family: Helvetica;
   font-weight: lighter;
@@ -235,13 +236,13 @@
 }
 .section .section__bio .animate__animated.animate__slideInLeft {
   height: 50%;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
 }
 .section .section__bio .formacion {
   display: inline-block;
   width: 600px;
   height: 400px;
-  margin-left: 300px;
+  /*    left: 300px;*/
   margin-top: -7px;
   font-family: white;
 }
@@ -249,7 +250,7 @@
   width: 447px;
   border-top: 1px solid black;
   padding: 12px;
-  margin: 20px auto 0 -288px;
+  margin: 20px auto 0;
 }
 .section .section__bio .formacion h3 {
   width: 600px;
@@ -258,7 +259,7 @@
   font-size: 50px;
   line-height: 60px;
   text-align: right;
-  margin-left: -443px;
+  /*margin-left: -443px;*/
 }
 
 /*sección contacto*/
@@ -329,10 +330,10 @@
 .encabezado img {
   position: absolute;
   margin-top: 180px;
-  margin-left: 9px;
+  /*left: 9px;*/
 }
 
-.diseño {
+.design {
   height: 100vh;
   gap: 15px;
   grid-area: cont;
@@ -342,16 +343,16 @@
   align-items: center;
   align-content: flex-end;
   align-self: center;
-  margin-left: 33px;
+  /*left: 33px;*/
   margin-top: 400px;
 }
-.diseño__item {
+.design__item {
   width: 400px;
 }
-.diseño__item img {
+.design__item img {
   width: 100%;
 }
-.diseño__item h3 {
+.design__item h3 {
   font-family: "cairo", sans-serif;
   padding: 5px;
   margin: 5px;
@@ -372,7 +373,7 @@
 .fotografia__encabezado img {
   position: absolute;
   margin-top: 180px;
-  margin-left: 9px;
+  /*left: 9px;*/
 }
 
 .fotografia {
@@ -385,7 +386,7 @@
   align-items: center;
   align-content: flex-end;
   align-self: center;
-  margin-left: 33px;
+  /*left: 33px;*/
   margin-top: 400px;
 }
 .fotografia__item {
@@ -402,6 +403,17 @@
 
 /*Variables*/
 @media only screen and (max-width: 767px) {
+  #estructura1 {
+    display: grid;
+    grid-template-areas: "menu" "cont" "pie";
+    grid-template-columns: 1fr;
+    grid-template-rows: 252px 1035px 220px;
+    height: 1245px;
+    border: 10px solid rgb(242, 255, 0);
+  }
+  #estructura1 .header {
+    height: 262px;
+  }
   #estructura1 .header ul li {
     display: block;
     font-size: 36px;
@@ -415,16 +427,15 @@
   #estructura1 .footer__datos li {
     display: block;
     padding: 2px;
-    font-size: 12px;
-    margin-left: -220px;
+    font-size: 20px;
+    /*margin-left: -220px;*/
   }
   #estructura1 .titular {
+    height: 770px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-    margin-left: 40px;
+    align-items: flex-start;
     gap: 12px;
   }
   #estructura1 .titular .animate__animated.animate__zoomIn {
@@ -435,15 +446,15 @@
     width: 75px;
     height: 75px;
     margin-bottom: -81px;
-    margin-left: 651px;
+    margin-right: 5px;
   }
   #estructura1 .titular #estructura1 .titular__loop {
     margin-bottom: 276px;
-    margin-right: 15px;
+    /*margin-right: 15px;*/
     font-size: 20px;
   }
   #estructura1 .contacto {
-    margin-left: 60px;
+    /*margin-left: 60px;*/
     margin-top: 300px;
   }
   #estructura1 .contacto__titulo {
@@ -457,6 +468,13 @@
 }
 
 @media only screen and (max-width: 767px) {
+  #estructura2 {
+    display: grid;
+    grid-template-areas: "menu" "cont" "pie";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+  }
   #estructura2 .header ul li {
     display: block;
     font-size: 36px;
@@ -472,62 +490,67 @@
     display: block;
     padding: 2px;
     font-size: 12px;
-    margin-left: -220px;
+    /*margin-left: -220px;*/
   }
-}
-
-@media only screen and (max-width: 767px) {
-  .section .section__encabezado {
+  #estructura2 .section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+  #estructura2 .section__encabezado {
+    position: absolute;
+    display: inline-block;
+    width: 300px;
+    height: 406px;
+    left: 40px;
+    top: 300px;
     font-size: 60px;
-    margin-left: -76px;
-    margin-top: 200px;
-    display: block;
-    width: 20px;
   }
-  .section .section__bio {
+  #estructura2 .section__bio {
     margin-top: 600px;
-    margin-left: 20px;
+    /*    margin-left: 20px;*/
   }
-  .section .animate__animated.animate__slideInRight {
+  #estructura2 .section .animate__animated.animate__slideInRight {
     width: 100%;
   }
-  .section .animate__animated.animate__slideInRight p {
+  #estructura2 .section .animate__animated.animate__slideInRight p {
     width: 400px;
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     padding-top: 2px;
     font-family: Helvetica;
     font-weight: lighter;
     font-size: 20px;
   }
-  .encabezado h2 {
+  #estructura2 .encabezado h2 {
     position: absolute;
-    width: 1243px;
+    width: 400px;
     height: 406px;
     left: 60px;
     top: 300px;
     font-size: 80px;
   }
-  .encabezado img {
+  #estructura2 .encabezado img {
     position: absolute;
     width: 50px;
     height: 70px;
   }
-  .diseño {
+  #estructura2 .design {
     margin-top: 4000px;
   }
-  .fotografia__encabezado h2 {
+  #estructura2 .fotografia__encabezado h2 {
     font-size: 60px;
-    margin-left: -76px;
+    /*margin-left: -76px;*/
     margin-top: 200px;
     display: block;
     width: 20px;
   }
-  .fotografia__encabezado img {
+  #estructura2 .fotografia__encabezado img {
     position: absolute;
     width: 50px;
     height: 70px;
   }
-  .fotografia {
+  #estructura2 .fotografia {
     margin-top: 4000px;
   }
 }/*# sourceMappingURL=main.css.map */
